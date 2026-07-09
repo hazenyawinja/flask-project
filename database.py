@@ -18,3 +18,15 @@ insert_products()
 
 products=get_products()
 print(products)
+def get_sales():
+    cur.execute("select * from sales")
+    sales=cur.fetchall()
+    return sales
+
+def insert_sales():
+    cur.execute("insert into sales(pid,quantity,created_at)values(1,500,'2026-07-09 16:15:00')")
+    conn.commit
+
+insert_sales()
+sales=get_sales()
+print(sales)
