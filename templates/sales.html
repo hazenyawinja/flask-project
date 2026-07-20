@@ -1,2 +1,34 @@
 {% extends 'base.html' %}
 {% block title %} sales {% endblock %}
+
+{% block content %}
+<div>
+
+    <p> sales_data</p>
+    <div>
+        <table id="example" class="table table-striped">
+        <thead>
+            <tr>
+                <th>sales id</th>
+                <th>product id</th>
+                <th>quantity</th>
+                <th>created_at</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for sales in sales_data%}
+            <tr>
+                <td>{{sales[0]}}</td>
+                <td>{{sales[1]}}</td>
+                <td>{{sales[2]}}</td>
+                <td>{{sales[3]}}</td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
+{% endblock %}

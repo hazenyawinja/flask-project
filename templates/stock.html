@@ -1,2 +1,31 @@
 {% extends 'base.html' %}
 {% block title %}stock {% endblock %}
+{% block content %}
+<div>
+    <p>stock_data</p>
+
+    <div>
+        <table id="example" class="table table-striped">
+        <thead>
+            <tr>
+                <th>stock id</th>
+                <th>Product id</th>
+                <th>stock_quantity</th>
+                <th>created_at</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>stock[0]</td>
+                <td>stock[1]</td>
+                <td>stock[2]</td>
+                <td>stock[3]</td>
+                
+            </tr>
+            </tbody>
+            </table>
+    </div>
+</div>
+
+{% endblock %}
